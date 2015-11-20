@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="StanfordCPPLib">
+        <df name="private">
+          <in>main.h</in>
+          <in>randompatch.h</in>
+          <in>tokenpatch.h</in>
+          <in>tplatform.h</in>
+        </df>
+        <in>console.cpp</in>
+        <in>console.h</in>
+        <in>direction.cpp</in>
+        <in>direction.h</in>
+        <in>error.cpp</in>
+        <in>error.h</in>
+        <in>filelib.cpp</in>
+        <in>filelib.h</in>
+        <in>foreach.h</in>
+        <in>gevents.cpp</in>
+        <in>gevents.h</in>
+        <in>ginteractors.cpp</in>
+        <in>ginteractors.h</in>
+        <in>gmath.cpp</in>
+        <in>gmath.h</in>
+        <in>gobjects.cpp</in>
+        <in>gobjects.h</in>
+        <in>graph.h</in>
+        <in>grid.h</in>
+        <in>gtimer.cpp</in>
+        <in>gtimer.h</in>
+        <in>gtypes.cpp</in>
+        <in>gtypes.h</in>
+        <in>gwindow.cpp</in>
+        <in>gwindow.h</in>
+        <in>hashmap.cpp</in>
+        <in>hashmap.h</in>
+        <in>hashset.h</in>
+        <in>lexicon.cpp</in>
+        <in>lexicon.h</in>
+        <in>main.cpp</in>
+        <in>map.h</in>
+        <in>platform.cpp</in>
+        <in>platform.h</in>
+        <in>point.cpp</in>
+        <in>point.h</in>
+        <in>pqueue.h</in>
+        <in>queue.h</in>
+        <in>random.cpp</in>
+        <in>random.h</in>
+        <in>set.h</in>
+        <in>simpio.cpp</in>
+        <in>simpio.h</in>
+        <in>sound.cpp</in>
+        <in>sound.h</in>
+        <in>stack.h</in>
+        <in>startup.cpp</in>
+        <in>strlib.cpp</in>
+        <in>strlib.h</in>
+        <in>thread.cpp</in>
+        <in>thread.h</in>
+        <in>tokenscanner.cpp</in>
+        <in>tokenscanner.h</in>
+        <in>tplatform-posix.cpp</in>
+        <in>tplatform.cpp</in>
+        <in>vector.h</in>
+      </df>
+      <df name="test">
+        <df name="encodeDecode">
+        </df>
+        <df name="input">
+        </df>
+      </df>
+      <in>HuffmanEncoding.cpp</in>
+      <in>HuffmanEncoding.h</in>
+      <in>HuffmanEncodingTest.cpp</in>
+      <in>HuffmanTypes.h</in>
+      <in>MemoryDiagnostics.cpp</in>
+      <in>MemoryDiagnostics.h</in>
+      <in>ReferenceHuffmanEncoding.h</in>
+      <in>bstream.cpp</in>
+      <in>bstream.h</in>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

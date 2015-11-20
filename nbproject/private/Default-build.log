@@ -1,0 +1,35 @@
+(cd StanfordCPPLib; make all)
+make[1]: Entering directory `/home/bulldozer/Documents/shpp/Assignment6 (2)/StanfordCPPLib'
+g++ -c -fvisibility-inlines-hidden -funsigned-char console.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char direction.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char error.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char filelib.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char gevents.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char ginteractors.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char gmath.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char gobjects.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char gtimer.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char gtypes.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char gwindow.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char hashmap.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char lexicon.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char main.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char platform.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char point.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char random.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char simpio.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char sound.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char startup.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char strlib.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char thread.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char tplatform.cpp
+g++ -c -fvisibility-inlines-hidden -funsigned-char tokenscanner.cpp
+ar cr libStanfordCPPLib.a console.o direction.o error.o filelib.o gevents.o ginteractors.o gmath.o gobjects.o gtimer.o gtypes.o gwindow.o hashmap.o lexicon.o main.o platform.o point.o random.o simpio.o sound.o startup.o strlib.o thread.o tplatform.o tokenscanner.o
+ranlib libStanfordCPPLib.a
+make[1]: Leaving directory `/home/bulldozer/Documents/shpp/Assignment6 (2)/StanfordCPPLib'
+ln -s StanfordCPPLib/libStanfordCPPLib.a .
+g++ -c -IStanfordCPPLib -fvisibility-inlines-hidden -g -funsigned-char HuffmanEncoding.cpp
+g++ -c -IStanfordCPPLib -fvisibility-inlines-hidden -g -funsigned-char bstream.cpp
+g++ -c -IStanfordCPPLib -fvisibility-inlines-hidden -g -funsigned-char HuffmanEncodingTest.cpp
+g++ -c -IStanfordCPPLib -fvisibility-inlines-hidden -g -funsigned-char MemoryDiagnostics.cpp
+g++ -o Huffman -L. ReferenceHuffmanEncoding.o HuffmanEncoding.o bstream.o HuffmanEncodingTest.o MemoryDiagnostics.o -lStanfordCPPLib
