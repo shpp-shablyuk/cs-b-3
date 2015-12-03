@@ -100,6 +100,27 @@ void freeTree(Node* root) {
     delete root;
 }
 
+void findCode(Node* node, Vector<bool>& code, Map<ext_char, Vector<bool> >& codeMap) { 
+    if (node->character != NOT_A_CHAR) { 
+        codeMap[node->character] = code;
+    } else {
+    
+        Vector<bool> codeL = code;
+        codeL.push_back(1);
+        findCode(node->zero, codeL, codeMap);
+
+        Vector<bool> codeR = code;
+        codeR.push_back(0);
+        findCode(node->one, codeR, codeMap);
+    }
+}
+
+void writeBitToFile(Vector<bool> code, obstream& outfile) {
+    foreach(bool bit in code) {
+        outfile.writeBit(bit);
+    }
+}
+
 /* Function: encodeFile
  * Usage: encodeFile(source, encodingTree, output);
  * --------------------------------------------------------
@@ -118,31 +139,7 @@ void freeTree(Node* root) {
  *     This means that you should just start writing the bits
  *     without seeking the file anywhere.
  */ 
-
-void findCode(Node* node, Vector<bool>& code, Map<ext_char, Vector<bool> >& codeMap) { 
-    if (node->character != NOT_A_CHAR) { 
-        codeMap[node->character] = code;
-    } else {
-    
-        Vector<bool> codeL = code;
-        codeL.push_back(1);
-        findCode(node->zero, codeL, codeMap);
-
-        Vector<bool> codeR = code;
-        codeR.push_back(0);
-        findCode(node->one, codeR, codeMap);
-    }
-}
-
-void writeBitToFile(Vector<bool> code, obstream& outfile) {
-    foreach(bool bit in code) {
-            outfile.writeBit(bit);
-    }
-}
-
-void encodeFile(istream& infile, Node* encodingTree, obstream& outfile) {
-    
-    
+void encodeFile(istream& infile, Node* encodingTree, obstream& outfile) { 
     Vector<bool> code;
     Map< ext_char, Vector<bool> > HuffCodeMap;
     findCode(encodingTree, code, HuffCodeMap);   
@@ -187,12 +184,11 @@ void findCodeChar(Node* node, string& code, Map<string, ext_char>& codeMap) {
 }
 
 template <typename T>
-  string NumberToString ( T Number )
-  {
-     ostringstream ss;
-     ss << Number;
-     return ss.str();
-  }
+string NumberToString ( T Number ) {
+   ostringstream ss;
+   ss << Number;
+   return ss.str();
+}
 
 void decodeFile(ibstream& infile, Node* encodingTree, ostream& file) {
     string code = "";
